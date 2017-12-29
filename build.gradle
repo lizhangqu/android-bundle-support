@@ -1,0 +1,30 @@
+Properties properties = new Properties()
+File localPropertiesFile = project.rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    properties.load(localPropertiesFile.newDataInputStream())
+}
+
+allprojects { Project project ->
+    repositories {
+        maven {
+            url 'https://dl.google.com/dl/android/maven2'
+        }
+        maven {
+            url "https://www.jetbrains.com/intellij-repository/snapshots"
+        }
+        mavenCentral()
+    }
+
+    configurations.all {
+        it.resolutionStrategy.cacheDynamicVersionsFor(5, 'minutes')
+        it.resolutionStrategy.cacheChangingModulesFor(0, 'seconds')
+    }
+
+    properties.each { def key, def value ->
+        project.ext.set(key, value)
+    }
+
+}
+
+
+

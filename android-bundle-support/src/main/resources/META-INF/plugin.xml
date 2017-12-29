@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>io.github.lizhangqu.intellij.plugin.android.bundle</id>
+    <name>Android Bundle Support</name>
+    <vendor email="li330324@gmail.com" url="https://fucknmb.com">区长</vendor>
+    <depends>org.jetbrains.android</depends>
+
+    <application-components>
+        <component>
+            <implementation-class>io.github.lizhangqu.intellij.android.bundle.BundleFileSystem
+            </implementation-class>
+        </component>
+    </application-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="io.github.lizhangqu.intellij.android.bundle.BundleFileTypeFactory"/>
+        <fileEditorProvider implementation="io.github.lizhangqu.intellij.android.bundle.BundleEditorProvider"/>
+    </extensions>
+
+    <actions>
+
+    </actions>
+
+</idea-plugin>

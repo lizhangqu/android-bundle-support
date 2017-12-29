@@ -1,0 +1,5 @@
+*.iml
+build
+.idea
+.gradle
+android-studio-sandbox
