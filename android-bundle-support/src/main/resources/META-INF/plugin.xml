@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>io.github.lizhangqu.intellij.plugin.android.bundle</id>
     <name>Android Bundle Support</name>
-    <vendor email="li330324@gmail.com" url="https://fucknmb.com">区长</vendor>
+    <vendor email="li330324@gmail.com" url="https://github.com/lizhangqu/android-bundle-support">区长</vendor>
     <depends>org.jetbrains.android</depends>
 
     <application-components>
