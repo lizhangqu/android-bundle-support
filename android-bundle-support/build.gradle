@@ -1,15 +1,16 @@
 //plugins {
 //    id "org.jetbrains.intellij" version "0.2.17"
 //}
+
 buildscript {
     repositories {
+        jcenter()
         maven {
             url "https://plugins.gradle.org/m2/"
         }
     }
     dependencies {
         classpath "gradle.plugin.org.jetbrains.intellij.plugins:gradle-intellij-plugin:0.2.17"
-        classpath 'org.jetbrains.intellij:plugin-repository-rest-client:0.4.26'
     }
 }
 apply plugin: 'org.jetbrains.intellij'
@@ -31,21 +32,24 @@ intellij {
     version null
     type "AI"
     plugins 'android'
-    updateSinceUntilBuild false
-    sameSinceUntilBuild false
+    updateSinceUntilBuild true
+    sameSinceUntilBuild true
     localPath "/Applications/Android Studio.app"
     sandboxDirectory "${project.file('android-studio-sandbox')}"
 }
 
 patchPluginXml {
+    pluginId "io.github.lizhangqu.intellij.plugin.android.bundle"
     version "${project.version}"
     pluginDescription "支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开"
-    changeNotes "支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开"
+    changeNotes "1、支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开"
+    sinceBuild "AI-171"
+    untilBuild "AI-173.*"
 }
 
-
-publishPlugin {
-    username project.hasProperty("username") ? project.ext.username : ""
-    password project.hasProperty("password") ? project.ext.password : ""
-    host project.hasProperty("host") ? project.ext.host : "https://plugins.jetbrains.com"
-}
+// can't work, commont it
+//publishPlugin {
+//    username project.hasProperty("username") ? project.ext.username : ""
+//    password project.hasProperty("password") ? project.ext.password : ""
+//    host project.hasProperty("host") ? project.ext.host : "https://plugins.jetbrains.com"
+//}

@@ -6,6 +6,7 @@ if (localPropertiesFile.exists()) {
 
 allprojects { Project project ->
     repositories {
+        jcenter()
         maven {
             url 'https://dl.google.com/dl/android/maven2'
         }
