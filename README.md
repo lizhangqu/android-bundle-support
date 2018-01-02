@@ -1,6 +1,6 @@
 ### android bundle support
 
-支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开，这类文件会添加android的图标，不是zip文件无任何提示，否则使用apk analyzer打开
+增强型apk analyzer，支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开，这类文件会添加android的图标，不是zip文件无任何提示，否则使用apk analyzer打开，其中jar文件不修改图标。
 
 
 ### 支持的文件列表
@@ -11,4 +11,16 @@
  - so文件，注意只有在so为zip包的时候才会被打开，否则忽略，场景：android插件化
  - atlas的ap文件
  - atlas的awb文件
+ 
+### 本地安装
+
+ - 下载release/android-bundle-support-1.0.0.zip
+ - Android Studio -> Preferences -> Plugins -> Install plugin from disk, 选择文件
+ - 重启Android Studio
+
+### 支持Android Studio版本
+ 
+ - Android Studio 3.0.0
+ - Android Studio 3.0.1
+ - Android Studio 3.1.0+ 预览版
  
