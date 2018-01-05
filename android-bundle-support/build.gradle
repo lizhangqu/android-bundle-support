@@ -41,8 +41,8 @@ intellij {
 patchPluginXml {
     pluginId "io.github.lizhangqu.intellij.plugin.android.bundle"
     version "${project.version}"
-    pluginDescription "支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开"
-    changeNotes "1、支持ap_, ap, aar, jar, so, awb等zip文件使用apk analyzer打开"
+    pluginDescription "support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
+    changeNotes "1、support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
     sinceBuild "AI-171"
     untilBuild "AI-173.*"
 }
