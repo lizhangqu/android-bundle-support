@@ -12,6 +12,13 @@
  - atlas的ap文件
  - atlas的awb文件
  
+### 插件仓库安装
+
+ - Android Studio -> Preferences -> Plugins -> Browse repositories
+ - Search 'Android Bundle Support' and install it
+ - restart Android Studio
+ 
+ 
 ### 本地安装
 
  - 下载 [Android-Bundle-Support-1.0.0.zip](https://raw.githubusercontent.com/lizhangqu/android-bundle-support/master/release/Android-Bundle-Support-1.0.0.zip)
