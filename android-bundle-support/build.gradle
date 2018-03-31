@@ -19,7 +19,7 @@ apply plugin: 'idea'
 
 group = "io.github.lizhangqu"
 archivesBaseName = "android-bundle-support"
-version = "1.0.0"
+version = "1.0.1"
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -44,7 +44,7 @@ patchPluginXml {
     pluginDescription "support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
     changeNotes "1、support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
     sinceBuild "AI-171"
-    untilBuild "AI-173.*"
+    untilBuild "AI-181.*"
 }
 
 // can't work, commont it
