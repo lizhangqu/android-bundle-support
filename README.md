@@ -21,7 +21,7 @@
  
 ### 本地安装
 
- - 下载 [Android-Bundle-Support-1.0.1.zip](https://raw.githubusercontent.com/lizhangqu/android-bundle-support/master/release/Android-Bundle-Support-1.0.1.zip)
+ - 下载 [Android-Bundle-Support-1.0.2.zip](https://raw.githubusercontent.com/lizhangqu/android-bundle-support/master/release/Android-Bundle-Support-1.0.2.zip)
  - Android Studio -> Preferences -> Plugins -> Install plugin from disk, 选择文件
  - 重启Android Studio
 
