@@ -36,6 +36,7 @@ public class BundleFileSystem extends ArchiveFileSystem {
             "ap",
             "aar",
             "jar",
+            "war",
             "awb"
     );
     public static final String PROTOCOL = "bundle";
