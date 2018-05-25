@@ -35,6 +35,7 @@ public class BundleFileSystem extends ArchiveFileSystem {
             "ap_",
             "ap",
             "aar",
+            "aab",
             "jar",
             "war",
             "awb"

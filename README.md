@@ -7,7 +7,9 @@
  
  - android 编译产生的资源ap_文件
  - android 编译产生的aar文件
+ - android app bundle编译产生的aab文件
  - jar文件
+ - war文件
  - so文件，注意只有在so为zip包的时候才会被打开，否则忽略，场景：android插件化
  - atlas的ap文件
  - atlas的awb文件
@@ -30,4 +32,5 @@
  - Android Studio 3.0.0
  - Android Studio 3.0.1
  - Android Studio 3.1.0
+ - Android Studio 3.2.0
  
