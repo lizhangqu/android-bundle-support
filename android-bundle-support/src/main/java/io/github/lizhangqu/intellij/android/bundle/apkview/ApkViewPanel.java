@@ -309,6 +309,10 @@ public class ApkViewPanel implements TreeSelectionListener {
     } else if (myApkParser.getArchive() instanceof InstantAppBundleArchive) {
       mySizeComponent.append("Zip file size: ");
       mySizeComponent.setToolTipText("The <b>zip file size</b> reflects the actual size of the zip file on disk.\n");
+    } else if(myApkParser.getArchive() instanceof ZipArchive) {
+      mySizeComponent.append("Uncompressed size: ");
+      mySizeComponent.append(getHumanizedSize(uncompressed), SimpleTextAttributes.REGULAR_BOLD_ATTRIBUTES);
+      mySizeComponent.append(", CompressedFullApk size: ");
     } else {
       mySizeComponent.append("Raw File Size: ");
     }
