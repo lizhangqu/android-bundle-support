@@ -23,7 +23,7 @@
  
 ### 本地安装
 
- - 下载 [Android-Bundle-Support-1.0.3.zip](https://raw.githubusercontent.com/lizhangqu/android-bundle-support/master/release/Android-Bundle-Support-1.0.3.zip)
+ - 下载 [Android-Bundle-Support-1.0.4.zip](https://raw.githubusercontent.com/lizhangqu/android-bundle-support/master/release/Android-Bundle-Support-1.0.4.zip)
  - Android Studio -> Preferences -> Plugins -> Install plugin from disk, 选择文件
  - 重启Android Studio
 
@@ -34,4 +34,6 @@
  - Android Studio 3.1.0
  - Android Studio 3.2.0
  - Android Studio 3.3.0
+ 
+ 1.0.4版本开始只支持Android Studio 3.3.0+
  
