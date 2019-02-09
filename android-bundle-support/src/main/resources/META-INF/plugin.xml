@@ -6,14 +6,15 @@
 
     <application-components>
         <component>
-            <implementation-class>io.github.lizhangqu.intellij.android.bundle.BundleFileSystem
+            <implementation-class>io.github.lizhangqu.intellij.android.bundle.apkview.ApkFileSystem
             </implementation-class>
         </component>
     </application-components>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileTypeFactory implementation="io.github.lizhangqu.intellij.android.bundle.BundleFileTypeFactory"/>
-        <fileEditorProvider implementation="io.github.lizhangqu.intellij.android.bundle.BundleEditorProvider"/>
+        <fileTypeFactory implementation="io.github.lizhangqu.intellij.android.bundle.filetype.BundleFileTypeFactory"/>
+        <fileEditorProvider implementation="io.github.lizhangqu.intellij.android.bundle.apkview.ApkEditorProvider"/>
+
     </extensions>
 
     <actions>
