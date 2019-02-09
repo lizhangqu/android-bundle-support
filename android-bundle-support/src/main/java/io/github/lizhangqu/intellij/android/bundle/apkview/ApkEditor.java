@@ -390,25 +390,27 @@ public class ApkEditor extends UserDataHolderBase implements FileEditor, ApkView
     }
   }
 
-  @SuppressWarnings("Duplicates")
-  private static boolean isBinaryXml(Path path, byte[] bytes) {
-    String relativePath = path.toString();
-    if(relativePath.startsWith("/")){
-        relativePath = relativePath.substring(1);
-    }
-    if (!relativePath.endsWith(SdkConstants.DOT_XML)) {
+  boolean isBinaryXml(Path p, byte[] content) {
+    if (!p.toString().endsWith(SdkConstants.DOT_XML)) {
       return false;
+    } else {
+      Path name = p.getFileName();
+      if (name == null) {
+        return false;
+      } else {
+        Path contents = p.getFileSystem().getPath("/");
+        boolean manifest = p.equals(contents.resolve(SdkConstants.FN_ANDROID_MANIFEST_XML));
+        boolean insideResFolder = p.startsWith(contents.resolve(SdkConstants.FD_RES));
+        boolean insideResRaw = p.startsWith(contents.resolve(SdkConstants.FD_RES).resolve(SdkConstants.FD_RES_RAW));
+        boolean xmlResource = insideResFolder && !insideResRaw;
+        if (!manifest && !xmlResource) {
+          return false;
+        } else {
+          short code = Shorts.fromBytes(content[1], content[0]);
+          return code == Chunk.Type.XML.code();
+        }
+      }
     }
-
-    boolean encodedXmlPath = relativePath.equals(SdkConstants.FN_ANDROID_MANIFEST_XML) ||
-            (relativePath.startsWith(SdkConstants.FD_RES) &&
-                    !relativePath.startsWith(SdkConstants.FD_RES + "/" + SdkConstants.FD_RES_RAW));
-      if (!encodedXmlPath) {
-      return false;
-    }
-
-    short code = Shorts.fromBytes(bytes[1], bytes[0]);
-    return code == Chunk.Type.XML.code();
   }
 
   @NotNull
