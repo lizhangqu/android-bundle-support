@@ -50,7 +50,7 @@ patchPluginXml {
     untilBuild "AI-183.*"
 }
 
-// can't work, commont it
+// can't work, comment it
 //publishPlugin {
 //    username project.hasProperty("username") ? project.ext.username : ""
 //    password project.hasProperty("password") ? project.ext.password : ""
