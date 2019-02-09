@@ -364,7 +364,7 @@ public class ApkEditor extends UserDataHolderBase implements FileEditor, ApkView
       return null;
     }
 
-    if (archive.isBinaryXml(p, content)) {
+    if (archive.isBinaryXml(p, content) || isBinaryXml(p, content)) {
       content = BinaryXmlParser.decodeXml(name.toString(), content);
       return ApkVirtualFile.create(p, content);
     }
@@ -390,6 +390,26 @@ public class ApkEditor extends UserDataHolderBase implements FileEditor, ApkView
     }
   }
 
+  @SuppressWarnings("Duplicates")
+  private static boolean isBinaryXml(Path path, byte[] bytes) {
+    String relativePath = path.toString();
+    if(relativePath.startsWith("/")){
+        relativePath = relativePath.substring(1);
+    }
+    if (!relativePath.endsWith(SdkConstants.DOT_XML)) {
+      return false;
+    }
+
+    boolean encodedXmlPath = relativePath.equals(SdkConstants.FN_ANDROID_MANIFEST_XML) ||
+            (relativePath.startsWith(SdkConstants.FD_RES) &&
+                    !relativePath.startsWith(SdkConstants.FD_RES + "/" + SdkConstants.FD_RES_RAW));
+      if (!encodedXmlPath) {
+      return false;
+    }
+
+    short code = Shorts.fromBytes(bytes[1], bytes[0]);
+    return code == Chunk.Type.XML.code();
+  }
 
   @NotNull
   private Optional<FileEditorProvider> getFileEditorProviders(@Nullable VirtualFile file) {
