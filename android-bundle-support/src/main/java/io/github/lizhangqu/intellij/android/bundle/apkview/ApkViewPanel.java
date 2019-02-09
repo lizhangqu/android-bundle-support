@@ -22,6 +22,7 @@ import com.android.tools.apk.analyzer.*;
 import com.android.tools.apk.analyzer.internal.ApkArchive;
 import com.android.tools.apk.analyzer.internal.ArchiveTreeNode;
 import com.android.tools.apk.analyzer.internal.InstantAppBundleArchive;
+import com.android.tools.apk.analyzer.internal.ZipArchive;
 import com.android.tools.idea.concurrent.EdtExecutor;
 import com.android.tools.idea.projectsystem.ProjectSystemUtil;
 import com.android.tools.idea.stats.AnonymizerUtil;
@@ -128,6 +129,11 @@ public class ApkViewPanel implements TreeSelectionListener {
                              input -> {
                                assert input != null;
                                ArchiveEntry entry = Archives.getFirstManifestArchiveEntry(input);
+                               if(entry == null && input.getData().getArchive() instanceof ZipArchive) {
+                                 Archive archive = input.getData().getArchive();
+                                 Path path = archive.getContentRoot().resolve("AndroidManifest.xml");
+                                 entry = input.getChildren().stream().filter((x) -> x.getData().getPath().equals(path)).map(ArchiveNode::getData).findFirst().orElse(null);
+                               }
                                return apkParser.getApplicationInfo(pathToAapt, entry);
                              }, PooledThreadExecutor.INSTANCE);
 
