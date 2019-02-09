@@ -34,7 +34,7 @@ intellij {
     pluginName "Android Bundle Support"
     version null
     type "AI"
-    plugins 'android'
+    plugins 'android', "smali"
     updateSinceUntilBuild true
     sameSinceUntilBuild true
     localPath "/Applications/Android Studio.app"
