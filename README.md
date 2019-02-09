@@ -37,3 +37,7 @@
  
  1.0.4版本开始只支持Android Studio 3.3.0+
  
+### 依赖源码
+
+ - https://android.googlesource.com/platform/tools/adt/idea/+/studio-master-dev/apkanalyzer/src/
+ - https://android.googlesource.com/platform/tools/base/+/studio-master-dev/apkparser/analyzer/src/

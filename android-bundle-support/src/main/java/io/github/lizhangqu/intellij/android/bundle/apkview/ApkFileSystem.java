@@ -46,7 +46,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.Set;
 
 /**
- * https://android.googlesource.com/platform/tools/adt/idea/+/studio-master-dev/apkanalyzer/src/com/android/tools/idea/apk/viewer
+ * https://android.googlesource.com/platform/tools/adt/idea/+/studio-master-dev/apkanalyzer/src/
+ * https://android.googlesource.com/platform/tools/base/+/studio-master-dev/apkparser/analyzer/src/
  */
 public class ApkFileSystem extends ArchiveFileSystem {
   public static final Set<String> EXTENSIONS = ImmutableSet.of(
