@@ -1,4 +1,4 @@
-package io.github.lizhangqu.intellij.android.bundle;
+package io.github.lizhangqu.intellij.android.bundle.filetype;
 
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.vfs.VirtualFile;

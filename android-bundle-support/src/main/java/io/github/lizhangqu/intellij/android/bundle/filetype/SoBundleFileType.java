@@ -1,4 +1,4 @@
-package io.github.lizhangqu.intellij.android.bundle;
+package io.github.lizhangqu.intellij.android.bundle.filetype;
 
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -8,25 +8,25 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class AtlasAwbBundleFileType implements FileType {
-    public static final AtlasAwbBundleFileType INSTANCE = new AtlasAwbBundleFileType();
+public class SoBundleFileType implements FileType {
+    public static final SoBundleFileType INSTANCE = new SoBundleFileType();
 
     @NotNull
     @Override
     public String getName() {
-        return "awb";
+        return "so";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Android atlas awb";
+        return "Android Plugin Bundle";
     }
 
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "awb";
+        return "so";
     }
 
     @Nullable

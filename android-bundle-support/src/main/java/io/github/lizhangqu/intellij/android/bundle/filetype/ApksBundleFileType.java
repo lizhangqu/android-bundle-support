@@ -1,4 +1,4 @@
-package io.github.lizhangqu.intellij.android.bundle;
+package io.github.lizhangqu.intellij.android.bundle.filetype;
 
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -8,25 +8,25 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class AarBundleFileType implements FileType {
-    public static final AarBundleFileType INSTANCE = new AarBundleFileType();
+public class ApksBundleFileType implements FileType {
+    public static final ApksBundleFileType INSTANCE = new ApksBundleFileType();
 
     @NotNull
     @Override
     public String getName() {
-        return "aar";
+        return "apks";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Android aar";
+        return "Android App Bundle Apks";
     }
 
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "aar";
+        return "apks";
     }
 
     @Nullable

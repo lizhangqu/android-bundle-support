@@ -1,4 +1,4 @@
-package io.github.lizhangqu.intellij.android.bundle;
+package io.github.lizhangqu.intellij.android.bundle.filetype;
 
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -8,25 +8,25 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class AtlasApBundleFileType implements FileType {
-    public static final AtlasApBundleFileType INSTANCE = new AtlasApBundleFileType();
+public class AarBundleFileType implements FileType {
+    public static final AarBundleFileType INSTANCE = new AarBundleFileType();
 
     @NotNull
     @Override
     public String getName() {
-        return "ap";
+        return "aar";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Android atlas ap";
+        return "Android aar";
     }
 
     @NotNull
     @Override
     public String getDefaultExtension() {
-        return "ap";
+        return "aar";
     }
 
     @Nullable
