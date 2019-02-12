@@ -59,8 +59,7 @@ public class ApkFileSystem extends ArchiveFileSystem {
           "apks",
           "jar",
           "war",
-          "awb",
-          "xml"
+          "awb"
   );
 
   public static final String PROTOCOL = "bundle";

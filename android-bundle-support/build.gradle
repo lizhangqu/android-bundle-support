@@ -19,7 +19,7 @@ apply plugin: 'idea'
 
 group = "io.github.lizhangqu"
 archivesBaseName = "android-bundle-support"
-version = "1.0.4"
+version = "1.0.5"
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
