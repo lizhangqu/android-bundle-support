@@ -35,9 +35,10 @@ intellij {
     version null
     type "AI"
     plugins 'android', "smali"
-    updateSinceUntilBuild true
-    sameSinceUntilBuild true
+    updateSinceUntilBuild false
+    sameSinceUntilBuild false
     localPath "/Applications/Android Studio.app"
+    alternativeIdePath = "/Applications/Android Studio.app"
     sandboxDirectory "${project.file('android-studio-sandbox')}"
 }
 
@@ -47,7 +48,6 @@ patchPluginXml {
     pluginDescription "support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
     changeNotes "1、support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
     sinceBuild "AI-182.5107"
-    untilBuild "AI-191.*"
 }
 
 // can't work, comment it
