@@ -434,7 +434,7 @@ public class ApkViewPanel implements TreeSelectionListener {
 
       if (!Files.isDirectory(path)) {
         if (fileName == SdkConstants.FN_ANDROID_MANIFEST_XML) {
-          return AndroidIcons.ManifestFile;
+          return AndroidIcons.AndroidFile;
         }
         else if (fileName.endsWith(SdkConstants.DOT_DEX)) {
           return AllIcons.FileTypes.JavaClass;
