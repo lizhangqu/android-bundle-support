@@ -48,7 +48,7 @@ patchPluginXml {
     version "${project.version}"
     pluginDescription "support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
     changeNotes "1、support using android studio apk analyzer to open files such as ap_, ap, aar, jar, so, awb etc."
-    sinceBuild "AI-182.5107"
+    sinceBuild "AI-191.*"
     untilBuild "AI-195.*"
 
 }
