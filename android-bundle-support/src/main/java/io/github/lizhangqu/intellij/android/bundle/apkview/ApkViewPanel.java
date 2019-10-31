@@ -403,11 +403,11 @@ public class ApkViewPanel implements TreeSelectionListener {
         }
     }
 
-    private static final class CallbackListener<V> implements Runnable {
+    public static final class CallbackListener<V> implements Runnable {
         final Future<V> future;
         final FutureCallback<? super V> callback;
 
-        CallbackListener(Future<V> future, FutureCallBackAdapter<? super V> callback) {
+        public CallbackListener(Future<V> future, FutureCallBackAdapter<? super V> callback) {
             this.future = future;
             this.callback = callback;
         }

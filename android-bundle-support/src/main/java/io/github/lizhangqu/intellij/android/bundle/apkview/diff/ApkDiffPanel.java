@@ -24,6 +24,7 @@ import com.android.tools.apk.analyzer.internal.ApkDiffParser;
 import com.android.tools.apk.analyzer.internal.ApkEntry;
 import com.android.tools.apk.analyzer.internal.ApkFileByFileDiffParser;
 import io.github.lizhangqu.intellij.android.bundle.EdtExecutor;
+import io.github.lizhangqu.intellij.android.bundle.apkview.ApkViewPanel;
 import io.github.lizhangqu.intellij.android.bundle.apkview.ApkViewPanel.FutureCallBackAdapter;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -101,7 +102,7 @@ public class ApkDiffPanel {
         myCalculateFileByFileCheckBox.setEnabled(true);
       }
     };
-    Futures.addCallback(myFbfTreeStructureFuture, setRootNode, EdtExecutor.INSTANCE);
+    myFbfTreeStructureFuture.addListener(new ApkViewPanel.CallbackListener<>(myFbfTreeStructureFuture,setRootNode),EdtExecutor.INSTANCE);
   }
 
   private void constructDiffTree(){
