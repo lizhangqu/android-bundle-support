@@ -120,7 +120,7 @@ public class ApkDiffPanel {
         myCalculateFileByFileCheckBox.setEnabled(true);
       }
     };
-    Futures.addCallback(treeStructureFuture, setRootNode, EdtExecutor.INSTANCE);
+    treeStructureFuture.addListener(new ApkViewPanel.CallbackListener<>(treeStructureFuture,setRootNode),EdtExecutor.INSTANCE);
   }
 
   private void createUIComponents() {
